@@ -18,7 +18,7 @@
 </div>
 <div CLASS="col-md-3 col-sm-7 col-xs-7	 text-right pull-right">
 <div CLASS="butondesign2">
-<input TYPE="text" VALUE="Search" CLASS="search">
+<input TYPE="text" VALUE="Search" CLASS="search" onfocus="if(this.value == 'Search') { this.value = ''; }">
 <a href="#">Edit</a> </div>
 </div>
 </div>
@@ -37,7 +37,7 @@
 
 <div CLASS=" col-sm-12 text-left">
 <div CLASS="butondesign2" STYLE="padding-left:10px; padding-top:10px;">
-<input TYPE="text" VALUE="Search" CLASS="search searchsm" onfocus="if(this.value == 'Search') { this.value = ''; }">
+<input TYPE="text" placeholder="Search" CLASS="search searchsm" onfocus="if(this.value == 'Search') { this.value = ''; }">
  </div>
 </div>
 </div>
@@ -81,5 +81,20 @@
 <div CLASS="col-lg-2 col-md-4 col-sm-4 col-xs-6 " ><a target="_blank" href="http://www.flippdf.com/example/flip-pdf-example-of-cookie-rookie/mobile/index.html"> <IMG SRC="images/img-2.png" CLASS="imgshadow2" ALT=""/></a></div>
 </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   $('.search').on('keypress', function (e) {
+         if(e.which === 13){
+		 	var valStr =  $(this).val();
+		 	if(valStr!=""){
+    			var url      = window.location.href;  
+    			location.href = url+"?keyword="+ valStr;
+    		}
+         }
+   });
+});
+
+</script>
 </BODY>
 </HTML>
