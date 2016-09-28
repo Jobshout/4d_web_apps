@@ -16,7 +16,7 @@ Notes
 - In the search box you can search for book author or book name using keyword indexing. Example database has book with author Charles Fernyhough so you can search for “Fernyhough” or “light” etc.
 - Show All button will show all the books in the database
 
-Any questions feel free to email us at payments@jobshout.co.in
+Any questions feel free to email us at neha@jobshout.co.in
 
 Thanks!
 
